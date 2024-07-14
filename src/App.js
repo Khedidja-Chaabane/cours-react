@@ -8,6 +8,14 @@ import ClassClick from './components/ClassClick';
 import UserGreeting from './components/UserGreeting';
 import AdminTest from './components/AdminTest';
 import NameList from './components/NameList';
+import Inline from './components/Inline';
+import Stylsheets from './components/Stylsheets';
+import Formulaire from './components/Formulaire';
+import NewsLetter from './components/NewsLetter';
+import DataFetchingOne from './components/DataFetchingOne';
+import Film from './components/Film';
+import FilmUserChoice from './components/FilmUserChoice';
+
 
 function App() {
   return (
@@ -50,9 +58,15 @@ This is children props
       <UserGreeting/>
       <AdminTest/> */}
 
-      <NameList/>
-
-
+      {/* <NameList/> */}
+      {/* <Inline/> */}
+      {/* importer du style et activer des classes css */}
+      {/* <Stylsheets primary={true}/>  */}
+{/* <Formulaire/> */}
+{/* <NewsLetter/> */}
+{/* <DataFetchingOne/> */}
+<Film/>
+<FilmUserChoice/>
 </div>
   );
 }

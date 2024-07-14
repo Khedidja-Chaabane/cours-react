@@ -1,5 +1,6 @@
 import React from 'react'
 import Person from './Person'
+import './person.css'
 function NameList() {
     // const names = ['Kadija', 'Sara' , 'Elyas', 'Fred']; // création d'un tableau de noms ARRAY
     // on déclare une variable intermediaire

@@ -1,0 +1,13 @@
+.silverStyle{
+    border: 3px solid black;
+    border-radius: 10px;
+    color: indigo;
+    background-color: silver;
+}
+
+.dianaStyle{
+    border: 3px solid black;
+    border-radius: 10px;
+    color: lightpink;
+    background-color: darkslategray; 
+}
