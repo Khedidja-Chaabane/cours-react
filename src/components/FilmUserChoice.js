@@ -10,6 +10,9 @@ function FilmUserChoice() {
 
     useEffect(() => {
         //requete à l'api qui se déclenche à chaque changement de userChoice
+        //premiere ecriture avec la concaténation
+        // axios.get('https://www.omdbapi.com/?t='+userChoice+'&apikey=79036820')
+        //deuxieme ecriture avec les backquotes et le dollar 
         axios.get(`https://www.omdbapi.com/?t=${userChoice}&apikey=79036820`)
             .then(response => {
                 setLoading(false); // Désactive le chargement une fois la réponse reçue
@@ -31,7 +34,7 @@ function FilmUserChoice() {
     }
     return (
 
-        <div>
+        <React.Fragment>
             <h1>Recherchez un film</h1>
             {/* // Valeur de l'input liée à userChoice et Gestion du changement dans l'input*/}
             <input type="text" placeholder="Titre du film ..." value={userChoice} onChange={handleInputChange} />
@@ -43,7 +46,7 @@ function FilmUserChoice() {
             <h3>Année de sortie: {loading ? 'Loading ......' : moovie.Year}</h3>
             <h3>BoxOffice: {loading ? 'Loading ......' : moovie.BoxOffice}</h3>
             {error ? error : null}
-        </div>
+        </React.Fragment>
     )
 }
 

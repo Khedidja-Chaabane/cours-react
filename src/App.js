@@ -15,6 +15,8 @@ import NewsLetter from './components/NewsLetter';
 import DataFetchingOne from './components/DataFetchingOne';
 import Film from './components/Film';
 import FilmUserChoice from './components/FilmUserChoice';
+import DataFetchingAll from './components/DataFetchingAll';
+import DataFetchingTodos from './components/DataFetchingTodos';
 
 
 function App() {
@@ -65,8 +67,10 @@ This is children props
 {/* <Formulaire/> */}
 {/* <NewsLetter/> */}
 {/* <DataFetchingOne/> */}
-<Film/>
-<FilmUserChoice/>
+{/* <Film/>
+<FilmUserChoice/> */}
+{/* <DataFetchingAll/> */}
+<DataFetchingTodos/>
 </div>
   );
 }
