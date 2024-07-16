@@ -19,6 +19,7 @@ import DataFetchingAll from './components/DataFetchingAll';
 import DataFetchingTodos from './components/DataFetchingTodos';
 import DataTodosReducer from './components/DataTodosReducer';
 import DataFetchingUsers from './components/DataFetchingUsers';
+import DataFetchContact from './components/DataFetchContact';
 
 
 function App() {
@@ -74,7 +75,8 @@ This is children props
 {/* <DataFetchingAll/> */}
 {/* <DataFetchingTodos/> */}
 {/* <DataTodosReducer/> */}
-<DataFetchingUsers/>
+{/* <DataFetchingUsers/> */}
+<DataFetchContact/>
 </div>
   );
 }
