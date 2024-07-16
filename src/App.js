@@ -17,6 +17,8 @@ import Film from './components/Film';
 import FilmUserChoice from './components/FilmUserChoice';
 import DataFetchingAll from './components/DataFetchingAll';
 import DataFetchingTodos from './components/DataFetchingTodos';
+import DataTodosReducer from './components/DataTodosReducer';
+import DataFetchingUsers from './components/DataFetchingUsers';
 
 
 function App() {
@@ -70,7 +72,9 @@ This is children props
 {/* <Film/>
 <FilmUserChoice/> */}
 {/* <DataFetchingAll/> */}
-<DataFetchingTodos/>
+{/* <DataFetchingTodos/> */}
+{/* <DataTodosReducer/> */}
+<DataFetchingUsers/>
 </div>
   );
 }
