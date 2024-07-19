@@ -1,11 +1,12 @@
 import React, { useEffect, useReducer } from 'react'
 import axios from 'axios'
 
-function DataFetchContact() {
+
+function DataFetchCars() {
     const initialState = {         // Initial state pour le state initial du composant
         loading: true,
         error: '',
-        contacts: {}
+        cars: {}
     }
 
     const reducer = (state, action) => {
@@ -13,14 +14,14 @@ function DataFetchContact() {
             case 'FETCH SUCCESS':
                 return {
                     loading: false,
-                    contacts: action.payload,
+                    cars: action.payload,
                     error: ''
                 }
 
             case 'FETCH ERROR':
                 return {
                     loading: false,
-                    contacts: {},
+                    cars: {},
                     error: 'Something went wrong'
                 }
 
@@ -30,9 +31,8 @@ function DataFetchContact() {
     }
 
     const [state, dispatch] = useReducer(reducer, initialState)    // dispatch pour effectuer des actions sur le state  
-
     useEffect(() => {
-        axios.get('http://localhost:5000/')
+        axios.get('http://localhost:5000/allcars')
             .then((response) => {
                 dispatch({ type: 'FETCH SUCCESS', payload: response.data })
             })
@@ -41,20 +41,25 @@ function DataFetchContact() {
             });
 
     }, []);
-
   return (
-    <div>
-       
-        {state.loading ? 'loading........' : state.contacts.map((contact , index)=>{
-        
-        
-console.log(contact)
-       
-        
+    <React.Fragment>
+<h1>Les voitures</h1>
+    {state.loading? 'Chargement...' : state.cars.map((car, index) =>{
+        return (
+            <div key={index}>
+                <img src={car.image} alt={car.marque} />
+                <h2>Marque : {car.marque} </h2>
+                <h4>Modele : {car.modele}</h4>
+                <p>Description: <br/>{car.description} </p>
+                <hr/>
+                </div>
+               
+        )
         
     })}
-    </div>
+            </React.Fragment>
+
   )
 }
 
-export default DataFetchContact
+export default DataFetchCars
