@@ -19,6 +19,7 @@ import { BluekButton, Button } from './components/Button.style';
 import UpdateContact from './components/Contact/UpdateContact';
 import NewContact from './components/Contact/NewContact';
 import Connexion from './components/User/Connexion/Connexion';
+import ImageUpload from './components/ImageUpload';
 // import Greet from './components/Greet';
 // import Welcome from './components/Welcome';
 // import Heros from './components/Heros';
@@ -137,7 +138,7 @@ This is children props
 <BluekButton>Bouton bleu</BluekButton>
 <Button backgroundColor="silver">Bouton avec Props</Button>
 <Button backgroundColor="black" color="white">Bouton avec Props</Button>
-
+<ImageUpload/>
 </div>
   );
 }
