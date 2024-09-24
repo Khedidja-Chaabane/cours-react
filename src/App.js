@@ -20,6 +20,7 @@ import UpdateContact from './components/Contact/UpdateContact';
 import NewContact from './components/Contact/NewContact';
 import Connexion from './components/User/Connexion/Connexion';
 import ImageUpload from './components/ImageUpload';
+import NewPost from './components/Blog/NewPost';
 // import Greet from './components/Greet';
 // import Welcome from './components/Welcome';
 // import Heros from './components/Heros';
@@ -110,6 +111,7 @@ This is children props
   <Route path='/' element={<Home/>}/>
   <Route path='/blog' element={<DataFetchPosts/>}/>
   <Route path='/post/:id' element={<FetchOnePost/>}/>
+  <Route path='/newPost' element={<NewPost/>} />
 
   {/* Les routes protégées */}
   <Route path='/services' element={<Services/>}>
