@@ -38,12 +38,12 @@ import NewPost from './components/Blog/NewPost';
 // import Film from './components/Film';
 // import FilmUserChoice from './components/FilmUserChoice';
 // import DataFetchingAll from './components/DataFetchingAll';
-// import DataFetchingTodos from './components/DataFetchingTodos';
+//import DataFetchingTodos from './components/DataFetchingTodos';
 // import DataTodosReducer from './components/DataTodosReducer';
-// import DataFetchingUsers from './components/DataFetchingUsers';
+//  import DataFetchingUsers from './components/DataFetchingUsers';
 //
 // 
-// import DataFetchCars from './components/DataFetchCars';
+import DataFetchCars from './components/DataFetchCars';
 // import NewContact from './components/NewContact';
 
 function App() {
@@ -97,11 +97,10 @@ This is children props
 {/* <Film/>
 <FilmUserChoice/> */}
 {/* <DataFetchingAll/> */}
-{/* <DataFetchingTodos/> */}
 {/* <DataTodosReducer/> */}
 {/* <DataFetchingUsers/> */}
 {/* <DataFetchContact/>
-<DataFetchCars/>
+
 <NewContact/> */}
 {/* <DataFetchPosts/> */}
 
@@ -136,11 +135,14 @@ This is children props
   <Route path='/*' element={<NotFound/>}/>
   
 </Routes>
-<Button>SAlut</Button>
+<DataFetchCars/>
+{/* <DataFetchingTodos/> */}
+
+{/* <Button>SAlut</Button>
 <BluekButton>Bouton bleu</BluekButton>
 <Button backgroundColor="silver">Bouton avec Props</Button>
 <Button backgroundColor="black" color="white">Bouton avec Props</Button>
-<ImageUpload/>
+<ImageUpload/> */}
 </div>
   );
 }
