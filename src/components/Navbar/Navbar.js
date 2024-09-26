@@ -8,6 +8,7 @@ function Navbar() {
         <Link to="/services">Services</Link>
         <Link to="/profile/max">Profile</Link>
         <Link to="/admin">Admin</Link>
+        <Link to="/inscription">Inscription</Link>
         <Link to="http://localhost:5000/logout">Déconnexion</Link>
 
 

@@ -1,8 +1,8 @@
 import React from 'react'
-
 function Connexion() {
   return (
     <div>
+      <h1>Connexion</h1>
         <form action="http://localhost:5000/api/connexion" method="post">
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
@@ -18,5 +18,4 @@ function Connexion() {
     </div>
   )
 }
-
 export default Connexion

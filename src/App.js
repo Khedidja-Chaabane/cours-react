@@ -21,6 +21,7 @@ import NewContact from './components/Contact/NewContact';
 import Connexion from './components/User/Connexion/Connexion';
 import ImageUpload from './components/ImageUpload';
 import NewPost from './components/Blog/NewPost';
+import Inscription from './components/User/Inscription';
 // import Greet from './components/Greet';
 // import Welcome from './components/Welcome';
 // import Heros from './components/Heros';
@@ -43,7 +44,7 @@ import NewPost from './components/Blog/NewPost';
 //  import DataFetchingUsers from './components/DataFetchingUsers';
 //
 // 
-import DataFetchCars from './components/DataFetchCars';
+// import DataFetchCars from './components/DataFetchCars';
 // import NewContact from './components/NewContact';
 
 function App() {
@@ -121,7 +122,7 @@ This is children props
   <Route path='/newContact' element={<NewContact/>}/>
   <Route path='/contact/:id' element={<FetchOneContact/>}/>
   <Route path='/updateContact/:id' element={<UpdateContact/>}/>
-
+  <Route path='/inscription' element={<Inscription/>}/>
   <Route path='/connexion' element={<Connexion/>}/>
 
   <Route path='/profile/:id' element={<Profile/>}/>
@@ -135,7 +136,7 @@ This is children props
   <Route path='/*' element={<NotFound/>}/>
   
 </Routes>
-<DataFetchCars/>
+{/* <DataFetchCars/> */}
 {/* <DataFetchingTodos/> */}
 
 {/* <Button>SAlut</Button>
