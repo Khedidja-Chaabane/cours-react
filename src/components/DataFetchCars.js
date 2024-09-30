@@ -1,9 +1,10 @@
 import React, { useEffect, useReducer } from 'react'
 import axios from 'axios'
-
+import './cars.css'
 
 function DataFetchCars() {
-    const initialState = {         // Initial state pour le state initial du composant
+    // Initial state pour le state initial du composant
+    const initialState = {         
         loading: true,
         error: '',
         cars: {}
@@ -30,7 +31,8 @@ function DataFetchCars() {
         }
     }
 
-    const [state, dispatch] = useReducer(reducer, initialState)    // dispatch pour effectuer des actions sur le state  
+    const [state, dispatch] = useReducer(reducer, initialState) 
+    // dispatch pour effectuer des actions sur le state     
     useEffect(() => {
         axios.get('http://localhost:5000/allcars')
             .then((response) => {
@@ -43,11 +45,11 @@ function DataFetchCars() {
     }, []);
   return (
     <React.Fragment>
-<h1>Les voitures</h1>
+<h1>Nos voitures</h1>
     {state.loading? 'Chargement...' : state.cars.map((car, index) =>{
         return (
             <div key={index}>
-                <img src={car.image} alt={car.marque} />
+                <img src={car.image} alt={car.marque} className='car-img'/>
                 <h2>Marque : {car.marque} </h2>
                 <h4>Modele : {car.modele}</h4>
                 <p>Description: <br/>{car.description} </p>
