@@ -23,6 +23,7 @@ import ImageUpload from './components/ImageUpload';
 import NewPost from './components/Blog/NewPost';
 import Inscription from './components/User/Inscription';
 import DataFetchCars from './components/DataFetchCars';
+import MultipleImageUpload from './components/ImageUpload/MultipleImagesUpload';
 // import Greet from './components/Greet';
 // import Welcome from './components/Welcome';
 // import Heros from './components/Heros';
@@ -138,7 +139,9 @@ This is children props
   <Route path='/*' element={<NotFound/>}/>
   
 </Routes>
-<DataFetchCars/>
+{/* <ImageUpload/> */}
+<MultipleImageUpload/>
+{/* <DataFetchCars/> */}
 {/* <DataFetchingTodos/> */}
 
 {/* <Button>SAlut</Button>

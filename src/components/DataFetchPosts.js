@@ -58,6 +58,8 @@ function DataFetchPosts() {
                 <h4>Auteur : {post.auteur}</h4>
                 <h3>Description:  {post.description}</h3>
                 <p>Message : <br/>{post.message} </p>
+                {post.imageName ? <img src={`http://localhost:5000/${post.imageName}`} width={300} /> : null }
+
                 <PinkButton><Link to={`/post/${post._id}`}>Lire le post</Link></PinkButton>
                 <hr/>
                 </div>
