@@ -90,6 +90,8 @@ function NewContact() {
                     <input type="text" id="prenom" name="prenom" />
                     <label for="email">Adresse mail :</label>
                     <input type="text" id="email" name="email" />
+                    <label for="date_contact">Date :</label>
+                    <input type="date" id="date_contact" name="date_contact " />
                     <label for="message">Message :</label>
                     <textarea name="message" id="message"></textarea>
                     <input type="submit" />

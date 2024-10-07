@@ -1,6 +1,10 @@
 import React, { useEffect, useReducer } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import moment from 'moment'
+import 'moment/locale/fr'
+moment().locale('fr')
+
 function DataFetchContact() {
     const initialState = {         // Initial state pour le state initial du composant
         loading: true,
@@ -10,14 +14,17 @@ function DataFetchContact() {
 
     const reducer = (state, action) => {
         switch (action.type) {
-            case 'FETCH SUCCESS':
+            case 'FETCH_SUCCESS':
+                console.log("Success!");
+                
                 return {
                     loading: false,
                     contacts: action.payload,
                     error: ''
                 }
 
-            case 'FETCH ERROR':
+            case 'FETCH_ERROR':
+                console.log("Failed!");
                 return {
                     loading: false,
                     contacts: {},
@@ -34,10 +41,14 @@ function DataFetchContact() {
     useEffect(() => {
         axios.get('http://localhost:5000/')
             .then((response) => {
-                dispatch({ type: 'FETCH SUCCESS', payload: response.data })
+                console.log(response.data);
+                
+                dispatch({ type: 'FETCH_SUCCESS', payload: response.data })
             })
             .catch((error) => {
-                dispatch({ type: 'FETCH ERROR' })
+                console.log(error);
+
+                dispatch({ type: 'FETCH_ERROR' })
             });
 
     }, []);
@@ -59,6 +70,7 @@ function DataFetchContact() {
                         
                         <h4>Adresse mail : {contact.email}</h4>
                         <p>Message : <br />{contact.message} </p>
+                        <p>Date d'envoi : {moment(contact.date_contact).format('L')}</p>
                         <hr />
                     </div>
 
